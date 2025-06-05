@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discografía BTS</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #dbb7fc;
+      color: white;
+    }
+
+    header {
+      background-color: #4B0082;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    header img {
+      width: 120px;
+      height: auto;
+      margin-right: 15px;
+      position: absolute;
+      left: 20px;
+    }
+
+    .sidebar {
+      width: 180px;
+      background-color: #5e11a3;
+      padding: 20px 15px;
+      height: 100vh;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      transition: transform 0.3s ease;
+      z-index: 999;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .menu-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-list li {
+      margin-bottom: 15px;
+    }
+
+    .menu-list li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+
+    .menu-list li a:hover {
+      background-color: #7c29d3;
+    }
+
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 90px;
+      left: 10px;
+      background-color: #5e11a3;
+      color: white;
+      border: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    .main-content {
+      margin-left: 200px;
+      padding: 20px;
+      margin-top: 120px;
+    }
+
+    footer {
+      background-color: #333;
+      padding: 3px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 7px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .album-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .album {
+      text-align: center;
+      background-color: #d986ffa4;
+      padding: 10px;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .album:hover {
+      transform: scale(1.05);
+    }
+
+    .album img {
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .album h3 {
+      margin: 10px 0 5px;
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+    }
+
+    .album p {
+      color: #ccc;
+    }
+
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .main-content {
+        margin-left: 0;
+        margin-top: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.webp" alt="Logo de BTS" />
+    <h1>BTS</h1>
+  </header>
+
+  <button class="hamburger" onclick="toggleMenu()">☰ Menú</button>
+
+  <nav class="sidebar" id="sidebarMenu">
+    <div class="menu-header">
+      <h2>💜 </h2>
+    </div>
+    <ul class="menu-list">
+      <li><a href="index.html">🏠 Inicio</a></li>
+      <li><a href="biografia.html">👤 Biografía</a></li>
+      <li><a href="discografia.html">🎵 Discografía</a></li>
+      <li><a href="filmografia.html">🎬 Filmografía</a></li>
+      <li><a href="eras.html">🌌 ERAS</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <h1 style="color: #ffffff; text-align:center;">ÁLBUMS, SENCILLOS Y EP</h1>
+    <section class="album-grid">
+                <div class="album">
+                    <a  href="https://open.spotify.com/album/1vsTrL1h2bRHP1kUPvlIyb?si=bIMiPw3NRoOx37dy5JnKiA"> <img src="img/Mono.jpg" alt="Mono"></a>
+                    <h3>MONO (RM)</h3>
+                    <p>2018</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/2wGinO7YWLHN2sULIr4a7v?si=BAUwl8Y_Q12A1Yv5kVRDHg"><img src="img/Indigo.jpg" alt="Indigo"></a>
+                    <h3>Indigo (RM)</h3>
+                    <p>2022</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I?si=_0T9s2yEQ3-_CXizdPZR1g"> <img src="img/Right Place, Wrong Person.jpg" alt="Right Place, Wrong Person"></a>
+                    <h3>Right Place, Wrong Person (RM)</h3>
+                    <p>2024</p>
+                </div>
+                <div class="album">
+                     <br>
+                    <video poster="img/Neva Play.jpg" width="170" height="140" controls="controls" >
+                    <source src="videos/MV1.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                    <h3>Neva Play (RM)</h3>
+                    <p>Sencillo</p>
+                    <p>2024</p>
+                </div>  
+                <div class="album">
+                    <a href="https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt?si=4uAVqX8qQam0yNdozWxZOQ"><img src="img/Happy.jpg" alt="Happy"></a>
+                    <h3>Happy  (JIN)</h3>
+                    <p>2024</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/6MNt88F7umrtkwUPcOgG69?si=mggXF2MpSHyYoB5Q6vawiQ"><img src="img/Running Wild (Holiday Remix).jpg" alt="Running Wild (Holiday Remix)"></a>
+                    <h3>Running Wild (Holiday Remix) (JIN) </h3>
+                    <p>2024</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/3DmDoHxAeEiDFNWrHSKAdQ?si=p1ILONtWQsOAWyvJcM2X6Q"><img src="img/Echo.jpg" alt="Echo"></a>
+                    <h3>Echo (JIN) </h3>
+                    <p>2025</p>
+                </div>
+                <div class="album">
+                     <br>
+                    <video poster="img/The Astronaut.jpg" width="170" height="140" controls="controls" >
+                    <source src="videos/MV2.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                    <h3>The Astronaut (JIN)</h3>
+                    <p>Sencillo</p>
+                    <p>2022</p>
+                </div>  
+                <div class="album">
+                    <a href="https://open.spotify.com/album/1qHUxg0YIm6caZQrDJvDdk?si=4cwQdoiISmGWqd--rjaLpw"><img src="img/Agust D.jpg" alt="Agust D"></a>
+                    <h3>Agust D (SUGA) </h3>
+                    <p>2016</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/7lhFsAaVCFaYbkNvBMw5Zf?si=xwCsxoeBRa-BrDkHU49Pyw"><img src="img/D-2.jpg" alt="D-2"></a>
+                    <h3>D-2 (SUGA) </h3>
+                    <p>2020</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/446ROKmKfpEwkbi2SjELVX?si=H_G74GzGSUm4VchJ8ENqaA"><img src="img/D-DAY.jpg" alt="D-DAY"></a>
+                    <h3>D-DAY (SUGA) </h3>
+                    <p>2023</p>
+                </div>
+                <div class="album">
+                     <br>
+                    <video poster="img/People Pt.2 (feat. IU).jpg" width="170" height="140" controls="controls" >
+                    <source src="videos/MV3.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                    <h3>People Pt.2 (feat. IU) (SUGA) </h3>
+                    <p>Sencillo</p>
+                    <p>2023</p>
+                </div>  
+                <div class="album">
+                    <a href="https://open.spotify.com/album/0XX1044L7ovU5aon6nRiF7?si=fLCRnQXuTjiUr5d1z1WzGw"><img src="img/Hope World.jpg" alt="Hope World"></a>
+                    <h3>Hope World </h3>
+                    <h3>(J-HOPE) </h3>
+                    <p>2018</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/0FrC9lzgVhziJenigsrXdl?si=hZdO37CkTg6VzOU2OXa8xw"><img src="img/Jack In The Box.jpg" alt="Jack In The Box"></a>
+                    <h3>Jack In The Box </h3>
+                    <h3>(J-HOPE) </h3>
+                    <p>2022</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/3XuUxVKw2mDLSIkZNYoaa6?si=tlsF4fuATK6imxaghgMxqQ"><img src="img/Jack In The Box (HOPE Edition).jpg" alt="Jack In The Box (HOPE Edition)"></a>
+                    <h3>Jack In The Box (HOPE Edition) </h3>
+                    <h3>(J-HOPE) </h3>
+                    <p>2024</p>
+                </div>
+                <div class="album">
+                     <br>
+                    <video poster="img/MONA LISA.jpg" width="170" height="140" controls="controls" >
+                    <source src="videos/MV4.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                    <h3>MONA LISA </h3>
+                    <h3>(J-HOPE) </h3>
+                    <p>Sencillo</p>
+                    <p>2025</p>
+                </div>  
+                <div class="album">
+                    <a href="https://open.spotify.com/album/4xc3Lc9yASZgEJGH7acWMB?si=MmFMLmI4S3iPHv47ymQ_ZA"><img src="img/FACE.jpg" alt="FACE"></a>
+                    <h3>FACE (JIMIN) </h3>
+                    <p>EP</p>
+                    <p>2023</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/15XcLhiVMlSOipUddTNDnr?si=Hd5CDgVsRB6ADRwexB1EqQ"><img src="img/Who.jpg" alt="Who"></a>
+                    <h3>Who (JIMIN) </h3>
+                    <p>2024</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/5AQc0yFXRcdUdko4sZ1fW9?si=A9IVzu6ySjOU8ONcojC_8A"><img src="img/MUSE (WONDER ver.).jpg" alt="MUSE (WONDER ver.)"></a>
+                    <h3>MUSE (WONDER ver.) (JIMIN) </h3>
+                    <p>2024</p>
+                </div>
+                <div class="album">
+                     <br>
+                    <video poster="img/Closer Than This.jpg" width="170" height="140" controls="controls" >
+                    <source src="videos/MV5.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                    <h3>Closer Than This (JIMIN) </h3>
+                    <p>Sencillo</p>
+                    <p>2023</p>
+                </div>  
+                <div class="album">
+                    <a href="https://open.spotify.com/album/7ixOAT89NSsgUITYc5ByB5?si=II8CfeHDSwOg8HnxFgkKVw"><img src="img/Layover.jpg" alt="Layover"></a>
+                    <h3>Layover (V) </h3>
+                    <p> EP</p>
+                    <p>2023</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/7v4sqd0NZ9Fm8HnwCcCGIs?si=oLFy-bP7QQW0QcJLbilPzw"><img src="img/FRI(END)S.jpg" alt="FRI(END)S"></a>
+                    <h3>FRI(END)S (V) </h3>
+                    <p> EP</p>
+                    <p>2024</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/4w5Rzux7dz1GkLkNkMd7L3?si=OUxNeV-MRxiwkfplvJL0Xw"><img src="img/Snow Flower (feat. Peakboy).jpg" alt="Snow Flower (feat. Peakboy)"></a>
+                    <h3>Snow Flower (feat. Peakboy) (V) </h3>
+                    <p>Sencillo</p>
+                    <p>2020</p>
+                </div> 
+                <div class="album">
+                     <br>
+                    <video poster="img/Winter Ahead (with PARK HYO SHIN).jpg" width="170" height="140" controls="controls" >
+                    <source src="videos/MV6.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                    <h3>Winter Ahead (with PARK HYO SHIN) (V) </h3>
+                    <p>Sencillo</p>
+                    <p>2024</p>
+                </div>
+                  <div class="album">
+                    <a href="https://open.spotify.com/album/0fJ0beklzFwoBv01U8792s?si=ixQU2BfBRk6kPDPzsw1nBg"><img src="img/3D  The Remixes.jpg" alt="GOLDEN"></a>
+                    <h3>3D  The Remixes(JUNGKOOK) </h3>
+                    <p>2023</p>
+                </div>
+                 <div class="album">
+                    <a href="https://open.spotify.com/album/5pSk3c3wVwnb2arb6ohCPU?si=lwshoXDFQ3KxHXO5Ude5uQ"><img src="img/GOLDEN.jpg" alt="3D  The Remixes"></a>
+                    <h3>GOLDEN (JUNGKOOK) </h3>
+                    <p>2023</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/7pPaEvQFccrBU1VXhUWBI7?si=0u8r292sRQurZWpwkKm0Og"><img src="img/Seven (Weekday Ver.).jpg" alt="FRI(END)S"></a>
+                    <h3>Seven (Weekday Ver.) (JUNGKOOK) </h3>
+                    <p> EP</p>
+                    <p>2023</p>
+                </div>
+                 <div class="album">
+                     <br>
+                    <video poster="img/Stay Alive (Prod. SUGA of BTS).jpg" width="170" height="140" controls="controls" >
+                    <source src="videos/MV7.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                    <h3>Stay Alive (Prod. SUGA of BTS) (JUNGKOOK) </h3>
+                    <p>Sencillo</p>
+                    <p>2022</p>
+                </div>
+                 <a href="Index.html" class="boton" style="color: rgb(95, 7, 211); position: fixed; bottom: 85px;  right: 10px; ">🏠</a>
+                 <a href="discografia.html" class="boton" style="color: rgb(95, 7, 211); position: fixed; bottom: 85px;  right: 35px; "> 🔚 </a>
+                </div>
+        </section>
+
+    
+
+
+  
+    <footer style="background-color: #333; padding: 3px; position: fixed; bottom: 0; width: 100%; text-align: center; font-size: 7px;">
+        <h3>Redes Sociales Oficiales</h3>
+        <p>💜 Instagram: <a href="https://www.instagram.com/bts.bighitofficial/" style="color: rgb(190, 164, 223);">@bts.bighitofficial</a></p>
+        <p>💜 Twitter: <a href="https://twitter.com/BTS_twt" style="color: rgb(190, 164, 223);">@BTS_twt</a></p>
+        <p>💜 YouTube: <a href="https://www.youtube.com/user/BANGTANTV" style="color: rgb(190, 164, 223);">BANGTANTV</a></p>
+    </footer>
+<script>
+    function toggleMenu() {
+      document.getElementById('sidebarMenu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

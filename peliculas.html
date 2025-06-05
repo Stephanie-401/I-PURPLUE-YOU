@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTS - Página Oficial</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #809ff3;
+      color: white;
+    }
+
+    header {
+      background-color: #4B0082;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    header img {
+      width: 120px;
+      height: auto;
+      margin-right: 15px;
+      position: absolute;
+      left: 20px;
+    }
+
+    .sidebar {
+      width: 180px;
+      background-color: #5e11a3;
+      padding: 20px 15px;
+      height: 100vh;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      transition: transform 0.3s ease;
+      z-index: 999;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .menu-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-list li {
+      margin-bottom: 15px;
+    }
+
+    .menu-list li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+
+    .menu-list li a:hover {
+      background-color: #7c29d3;
+    }
+
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 90px;
+      left: 10px;
+      background-color: #5e11a3;
+      color: white;
+      border: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    .main-content {
+      margin-left: 200px;
+      padding: 20px;
+      margin-top: 120px;
+      text-align: center;
+      color: black;
+    }
+
+    footer {
+      background-color: #333;
+      padding: 3px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 7px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .main-content {
+        margin-left: 0 !important;
+        margin-top: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.webp" alt="Logo de BTS" />
+    <h1>BTS</h1>
+  </header>
+
+  <button class="hamburger" onclick="toggleMenu()">☰ Menú</button>
+
+  <nav class="sidebar" id="sidebarMenu">
+    <div class="menu-header">
+      <h2>💜</h2>
+    </div>
+    <ul class="menu-list">
+      <li><a href="Index.html">🏠 Inicio</a></li>
+      <li><a href="biografia.html">👤 Biografía</a></li>
+      <li><a href="discografia.html">🎵 Discografía</a></li>
+      <li><a href="filmografia.html">🎬 Filmografía</a></li>
+      <li><a href="eras.html">🌌 ERAS</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <h1>PELICULAS</h1>
+    <br>
+    <ol>
+       <h3><li><strong>Burn the Stage: The Movie (2018)</strong></li> Documental </h3>
+        <p><strong> Burn the Stage: The Movie</strong> es un documental que ofrece una mirada íntima a la gira mundial "WINGS TOUR" de la banda surcoreana BTS. 
+            Muestra imágenes detrás de escena, incluyendo entrevistas y escenas de conciertos, así como las vidas personales de los miembros de la banda</p>
+         <video poster="img/Burn the Stage The Movie.jpg" width="300" height="250" controls="controls" >
+                    <source src="videos/Burn the Stage The Movie.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                   <a href="https://youtu.be/YgG9f4MJ1eU?si=IGx8Y1fXroHBAUmc" style="color: rgb(2, 2, 2);"><h5>Burn the Stage: The Movie (2018)</h5></a> 
+       
+                   <h3><li><strong>Bring the Soul: The Movie (2019)</strong></li> (Documental) </h3>
+                    <p><strong>Bring the Soul: The Movie (2019)</strong>  es un documental musical, que captura su gira Love Yourself. 
+                      La película alterna entre imágenes de sus presentaciones en varias ciudades y una conversación entre los miembros en una azotea de París, luego de la gira europea. </p>
+        <video poster="img/Bring the Soul The Movie.jpg" width="300" height="250" controls="controls" >
+                    <source src="videos/Bring the Soul The Movie.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                   <a href="https://www.netflix.com/mx/title/81691276?source=35" style="color: rgb(2, 2, 2);"><h5>Bring the Soul: The Movie (2019)</h5></a> 
+
+    
+
+        <h3><li><strong> BTS: Permission to Dance on Stage LA (2022) </strong></li> (concierto) </h3>
+                    <p><strong>BTS: Permission to Dance on Stage – LA (2022)</strong> Una película de concierto que documenta las presentaciones en vivo de BTS en el SoFi Stadium de Los Ángeles a fines de 2021.
+                      La película, estrenada en 2022, incluye los grandes éxitos del grupo, como "Dynamite", "Butter" y "Permission to Dance", 
+                      capturando la energía de sus primeras presentaciones en vivo tras la pandemia.</p>
+        <video poster="img/BTS Permission to Dance on Stage LA.jpg" width="300" height="250" controls="controls" >
+                    <source src="videos/BTS Permission to Dance on Stage LA.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                   <a href="https://www.disneyplus.com/es-mx/browse/entity-efb001f4-3aac-43ad-a7de-e1547dfc640f" style="color: rgb(2, 2, 2);"><h5> BTS: Permission to Dance on Stage LA </h5></a> 
+
+
+          <h3><li><strong>BTS: Yet to Come in Cinemas (2023)</strong></li>(concierto)</h3>
+                    <p><strong>Yet to Come in Cinemas</strong> Antes de hacer una pausa de dos años para cumplir el servicio militar obligatorio, el grupo BTS ofrece un concierto especial en Busan, 
+                      durante el cual interpretan los grandes éxitos de su carrera.</p>
+        <video poster="img/Yet to Come in Cinemas.jpg" width="300" height="250" controls="controls" >
+                    <source src="videos/Yet to Come in Cinemas.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                   <a href="https://www.primevideo.com/detail/BTS-Yet-to-Come/0K11DW0KILODWF5T5CMO4VW98M" style="color: rgb(2, 2, 2);"><h5>Yet to Come in Cinemas</h5></a> 
+    
+       </ol>
+        <br>
+        <br> 
+          <a href="Index.html" class="boton" style="color: rgb(95, 7, 211); position: fixed; bottom: 85px;  right: 10px; ">🏠</a>
+          <a href="filmografia.html" class="boton" style="color: rgb(95, 7, 211); position: fixed; bottom: 85px;  right: 35px; "> 🔚 </a>
+        <br>
+        <br>
+    </div>
+
+ 
+    <footer>
+    <h3>Redes Sociales Oficiales</h3>
+    <p>💜 Instagram: <a href="https://www.instagram.com/bts.bighitofficial/" style="color: rgb(190, 164, 223);">@bts.bighitofficial</a></p>
+    <p>💜 Twitter: <a href="https://twitter.com/BTS_twt" style="color: rgb(190, 164, 223);">@BTS_twt</a></p>
+    <p>💜 YouTube: <a href="https://www.youtube.com/user/BANGTANTV" style="color: rgb(190, 164, 223);">BANGTANTV</a></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebarMenu').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

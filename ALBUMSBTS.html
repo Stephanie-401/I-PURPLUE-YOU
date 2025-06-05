@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discografía BTS</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #dbb7fc;
+      color: white;
+    }
+
+    header {
+      background-color: #4B0082;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    header img {
+      width: 120px;
+      height: auto;
+      margin-right: 15px;
+      position: absolute;
+      left: 20px;
+    }
+
+    .sidebar {
+      width: 180px;
+      background-color: #5e11a3;
+      padding: 20px 15px;
+      height: 100vh;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      transition: transform 0.3s ease;
+      z-index: 999;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .menu-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-list li {
+      margin-bottom: 15px;
+    }
+
+    .menu-list li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+
+    .menu-list li a:hover {
+      background-color: #7c29d3;
+    }
+
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 90px;
+      left: 10px;
+      background-color: #5e11a3;
+      color: white;
+      border: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    .main-content {
+      margin-left: 200px;
+      padding: 20px;
+      margin-top: 120px;
+    }
+
+    footer {
+      background-color: #333;
+      padding: 3px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 7px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .album-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .album {
+      text-align: center;
+      background-color: #d986ffa4;
+      padding: 10px;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .album:hover {
+      transform: scale(1.05);
+    }
+
+    .album img {
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .album h3 {
+      margin: 10px 0 5px;
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+    }
+
+    .album p {
+      color: #ccc;
+    }
+
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .main-content {
+        margin-left: 0;
+        margin-top: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.webp" alt="Logo de BTS" />
+    <h1>BTS</h1>
+  </header>
+
+  <button class="hamburger" onclick="toggleMenu()">☰ Menú</button>
+
+  <nav class="sidebar" id="sidebarMenu">
+    <div class="menu-header">
+      <h2>💜 </h2>
+    </div>
+    <ul class="menu-list">
+      <li><a href="index.html">🏠 Inicio</a></li>
+      <li><a href="biografia.html">👤 Biografía</a></li>
+      <li><a href="discografia.html">🎵 Discografía</a></li>
+      <li><a href="filmografia.html">🎬 Filmografía</a></li>
+      <li><a href="eras.html">🌌 ERAS</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <h1 style="color: #ffffff; text-align:center;">ÁLBUMS, SENCILLOS Y EP</h1>
+    <section class="album-grid">
+      <!-- Aquí van los divs de cada álbum -->
+      <div class="album">
+        <a href="https://open.spotify.com/album/6egaEe9JaULuUCkihSnYlH?si=GNjP0C8FRtaaskn3D7mbaw">
+          <img src="img/2 COOL 4 SKOOL.jpg" alt="2 COOL 4 SKOOL">
+        </a>
+        <h3>2 COOL 4 SKOOL</h3>
+        <p>2013</p>
+      </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/6rWmdSJIaGTVtdMJQ35Lvf?si=GNLwsNgJSKileRNnI_bpCw"><img src="img/O!RUL8,2.png" alt="O!RUL8,2?"></a>
+                    <h3>O!RUL8,2</h3>
+                    <p>2013</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/0pX41mddl0CZXxpxkQ7347?si=WHYA1pQUTqidOZlfG6pBAg"> <img src="img/Skool Luv Affair (Special Addition).jpg" alt="Skool Luv Affair (Special Addition)"></a>
+                    <h3>Skool Luv Affair (Special Addition)</h3>
+                    <p>2014</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/35voVqYGkotyJ945O9egDY?si=ZONVzjq_SFyfw_QNFVfu5w"><img src="img/DARK&WILD.jpg" alt="DARK&WILD"></a>
+                    <h3>DARK&WILD</h3>
+                    <p>2014</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF?si=EW6X7E0mQNeHNHPUWHU2Xg"><img src="img/Wings.jpg" alt="Wings "></a>
+                    <h3>Wings </h3>
+                    <p>2016</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/intl-es/album/6THpewjqJ15ORBJkh5CEYb?si=Ngq9RTM9SoCDyP1hBKSEPQ"><img src="img/YOU NEVER WALK ALONE.jpg" alt="YOU NEVER WALK ALONE "></a>
+                    <h3>YOU NEVER WALK ALONE </h3>
+                    <p>2017</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/intl-es/album/07Rq17GzCnIdWJcyVHb57G?si=uqSoYMNUSviA2sidUVuqCQ"><img src="img/Love Yourself Her.jpg" alt="Love Yourself: Her"></a>
+                    <h3>Love Yourself: Her</h3>
+                    <p>2017</p>
+                    </div>
+                    <div class="album">
+                        <a href="https://open.spotify.com/intl-es/album/66J1OXSaS3hBZASOV3el8t?si=jvSIw13ERPyVpzbxAAqFRw"><img src="img/Face Yourself.jpg" alt="Face Yourself "></a>
+                        <h3>Face Yourself </h3>
+                        <p>2018</p>    
+                </div>
+                <div class="album">
+                   <a href="https://open.spotify.com/intl-es/album/4NIqCxqP9o8Tp6tGLBqd8O?si=g3LL75flTF2LwHf01kXwHA"> <img src="img/Love Yourself Tear.jpg" alt="Love Yourself: Tear"></a>
+                    <h3>Love Yourself: Tear</h3>
+                    <p>2018</p>
+                </div>
+                <div class="album">
+                   <a href="https://open.spotify.com/intl-es/album/43wFM1HquliY3iwKWzPN4y?si=497OBMlhQgiNLgT7m-rXqA"> <img src="img/Love Yourself Answer.jpg" alt="Love Yourself Answer"></a>
+                    <h3>Love Yourself Answer</h3>
+                    <p>2018</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/intl-es/album/1v6mgJ29d4Ta3ZUfF0P18W?si=dX2ODNSNRRWixwIMruaceg"><img src="img/Fake Love Airplane Pt. 2.jpg" alt="Fake Love Airplane Pt. 2"></a>
+                    <h3>Fake Love Airplane Pt. 2</h3>
+                    <p>Sencillo</p>
+                    <p>2018</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/intl-es/album/2KqlAl1Kl5fZvbFgJ0qFB6?si=GNGt-xCeRkq5X5sBvjhxZw"><img src="img/Map of the Soul Persona.jpg" alt="Map of the Soul Persona"></a>
+                    <h3>Map of the Soul Persona</h3>
+                    <p>2019</p>
+                </div>
+                
+                <div class="album">
+                    <a href="https://open.spotify.com/intl-es/album/0rHMQLHyw0Bt17fRTJEqh6?si=oMjYIV01ReK5qSiBDo6AHA"><img src="img/LightsBoy with Luv.jpg" alt="LightsBoy with Luv"></a>
+                    <h3>Lights/Boy with Luv</h3>
+                    <p>Sencillo</p>
+                    <p>2019</p>
+                </div>
+                <div class="album">
+                    <a href="https://open.spotify.com/intl-es/album/5W1XY5ucNATjTULERvXx9j?si=Gspx3esbSTmm7BShA-XY5A"><img src="img/Map of the Soul 7.jpg" alt="Map of the Soul 7"></a>
+                    <h3>Map of the Soul 7</h3>
+                    <p>2020</p>
+                </div>
+                <div class="album">
+                     <br>
+                    <video poster="img/Dynamite (sencillo).jpg" width="170" height="140" controls="controls" >
+                    <source src="videos/1.mp4" type="video/mp4">
+                    <source src=" videos/1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                    <h3>Dynamite (sencillo)</h3>
+                    <p>2020</p>
+                </div>  
+                <div class="album">
+                    <a href="https://open.spotify.com/intl-es/album/6nYfHQnvkvOTNHnOhDT3sr?si=jZ0qlEfGT8GYtjSO7317pA"><img src="img/BE.jpg" alt="BE"></a>
+                    <h3>BE</h3>
+                    <p>2020</p>
+                </div>  
+                <div class="album">
+                    <a href="https://open.spotify.com/intl-es/album/6bN241dPMC54Ac6zV1B8hl?si=LWm9lYVGSHebpiCqHVY71Q"><img src="img/BTS, The Best.jpg" alt="BTS, The Best "></a>
+                    <h3>BTS, The Best </h3>
+                    <p>Recopilatorio</p>
+                    <p>2021</p>
+                </div> 
+                <div class="album">
+                    <br>
+                    <video poster="img/Butter.jpg" width="170" height="140" controls="controls" >
+                    <source src="videos/2.mp4" type="video/mp4">
+                    <source src=" videos/2.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                    <h3>Butter (sencillo)</h3>
+                    <p>2021</p>
+                </div> 
+                <div class="album">
+                    <br>
+                    <video poster="img/My Universe.jpg" width="170" height="140" controls="controls" >
+                    <source src="videos/3.mp4" type="video/mp4">
+                    <source src=" videos/3.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                    <h3>My Universe (sencillo) </h3>
+                    <p>2021</p>
+                </div> 
+                <div class="album">
+                   <a href="https://open.spotify.com/intl-es/album/6al2VdKbb6FIz9d7lU7WRB?si=CnYB2_f9RreuCHIiyLPbkw"> <img src="img/Proof.jpg" alt="Proof "></a>
+                    <h3>Proof</h3>
+                    <p>2022</p>
+                </div> 
+                 <a href="Index.html" class="boton" style="color: rgb(95, 7, 211); position: fixed; bottom: 85px;  right: 10px; ">🏠</a>
+                 <a href="discografia.html" class="boton" style="color: rgb(95, 7, 211); position: fixed; bottom: 85px;  right: 35px; "> 🔚 </a>
+                </div>
+        </section>
+    
+
+
+    <footer style="background-color: #333; padding: 3px; position: fixed; bottom: 0; width: 100%; text-align: center; font-size: 7px;">
+        <h3>Redes Sociales Oficiales</h3>
+        <p>💜 Instagram: <a href="https://www.instagram.com/bts.bighitofficial/" style="color: rgb(190, 164, 223);">@bts.bighitofficial</a></p>
+        <p>💜 Twitter: <a href="https://twitter.com/BTS_twt" style="color: rgb(190, 164, 223);">@BTS_twt</a></p>
+        <p>💜 YouTube: <a href="https://www.youtube.com/user/BANGTANTV" style="color: rgb(190, 164, 223);">BANGTANTV</a></p>
+    </footer>
+<script>
+    function toggleMenu() {
+      document.getElementById('sidebarMenu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

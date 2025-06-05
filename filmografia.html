@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTS - Filmografía</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #a25df062;
+      color: white;
+    }
+
+    header {
+      background-color: #4B0082;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    header img {
+      width: 120px;
+      height: auto;
+      margin-right: 15px;
+      position: absolute;
+      left: 20px;
+    }
+
+    .sidebar {
+      width: 180px;
+      background-color: #6A0DAD;
+      padding: 20px 15px;
+      height: 100vh;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      transition: transform 0.3s ease;
+      z-index: 999;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .menu-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-list li {
+      margin-bottom: 15px;
+    }
+
+    .menu-list li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+
+    .menu-list li a:hover {
+      background-color: #9256e4;
+    }
+
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 90px;
+      left: 10px;
+      background-color: #6A0DAD;
+      color: white;
+      border: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    .main-content {
+      margin-left: 200px;
+      padding: 20px;
+      margin-top: 120px;
+    }
+
+    .main-content h1 {
+      color: #4B0082;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .film-option {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      width: 80%;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 5px 15px rgba(106, 13, 173, 0.2);
+      transition: all 0.3s;
+      text-align: center;
+      color: #555;
+    }
+
+    .film-option:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(106, 13, 173, 0.3);
+    }
+
+    .film-option h2 {
+      color: #6A0DAD;
+      font-size: 1.8em;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .film-option p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    .film-option a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .film-option img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .home-link {
+      color: rgb(95, 7, 211);
+      position: fixed;
+      bottom: 85px;
+      right: 10px;
+      font-size: 1.8em;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    footer {
+      background-color: #333;
+      padding: 3px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 7px;
+      color: white;
+      z-index: 1000;
+    }
+
+    footer a {
+      color: rgb(190, 164, 223);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .main-content {
+        margin-left: 0 !important;
+        margin-top: 160px;
+      }
+
+      .film-option {
+        width: 90%;
+        padding: 15px;
+      }
+
+      header img {
+        position: static;
+        margin: 0 10px 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.webp" alt="Logo de BTS" />
+    <h1>BTS</h1>
+  </header>
+
+  <button class="hamburger" onclick="toggleMenu()">☰ Menú</button>
+
+  <nav class="sidebar" id="sidebarMenu">
+    <div class="menu-header">
+      <h2>💜</h2>
+    </div>
+    <ul class="menu-list">
+      <li><a href="Index.html">🏠 Inicio</a></li>
+      <li><a href="biografia.html">👤 Biografía</a></li>
+      <li><a href="discografia.html">🎵 Discografía</a></li>
+      <li><a href="filmografia.html">🎬 Filmografía</a></li>
+      <li><a href="eras.html">🌌 ERAS</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <h1>Filmografía</h1>
+
+    <div class="film-option">
+      <a href="series.html">
+        <h2>SERIES</h2>
+        <p>Descubre las apariciones especiales y reality shows de BTS.</p>
+        <img src="img/poster 1.jpg" alt="Series de BTS" />
+      </a>
+    </div>
+
+    <div class="film-option">
+      <a href="peliculas.html">
+        <h2>PELÍCULAS</h2>
+        <p>Conoce sus documentales y conciertos en la pantalla grande.</p>
+        <img src="img/poster.jpg" alt="Películas de BTS" />
+      </a>
+    </div>
+
+    <a href="Index.html" class="home-link" aria-label="Volver a inicio">🏠</a>
+  </main>
+
+  <footer>
+    <h3>Redes Sociales Oficiales</h3>
+    <p>💜 Instagram: <a href="https://www.instagram.com/bts.bighitofficial/" target="_blank" rel="noopener noreferrer">@bts.bighitofficial</a></p>
+    <p>💜 Twitter: <a href="https://twitter.com/BTS_twt" target="_blank" rel="noopener noreferrer">@BTS_twt</a></p>
+    <p>💜 YouTube: <a href="https://www.youtube.com/user/BANGTANTV" target="_blank" rel="noopener noreferrer">BANGTANTV</a></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebarMenu').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
+

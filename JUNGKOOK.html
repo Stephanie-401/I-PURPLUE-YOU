@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTS - Jungkook</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgba(206, 80, 80, 0.993);
+      color: white;
+    }
+
+    header {
+      background-color: #4B0082;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    header img {
+      width: 120px;
+      height: auto;
+      margin-right: 15px;
+      position: absolute;
+      left: 20px;
+    }
+
+    .sidebar {
+      width: 180px;
+      background-color: #6A0DAD;
+      padding: 20px 15px;
+      height: 100vh;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      transition: transform 0.3s ease;
+      z-index: 999;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .menu-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-list li {
+      margin-bottom: 15px;
+    }
+
+    .menu-list li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+
+    .menu-list li a:hover {
+      background-color: #8338ec;
+    }
+
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 90px;
+      left: 10px;
+      background-color: #6A0DAD;
+      color: white;
+      border: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    .main-content {
+      margin-left: 200px;
+      padding: 20px;
+      margin-top: 120px;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #333;
+      padding: 3px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 7px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .main-content {
+        margin-left: 0 !important;
+        margin-top: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <img src="logo.webp" alt="Logo de BTS" />
+    <h1>BTS</h1>
+  </header>
+
+  <!-- BOTÓN HAMBURGUESA -->
+  <button class="hamburger" onclick="toggleMenu()">☰ Menú</button>
+
+  <!-- MENÚ LATERAL -->
+  <nav class="sidebar" id="sidebarMenu">
+    <div class="menu-header">
+      <h2>💜</h2>
+    </div>
+    <ul class="menu-list">
+      <li><a href="Index.html">🏠 Inicio</a></li>
+      <li><a href="biografia.html">👤 Biografía</a></li>
+      <li><a href="discografia.html">🎵 Discografía</a></li>
+      <li><a href="filmografia.html">🎬 Filmografía</a></li>
+      <li><a href="eras.html">🌌 ERAS</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="main-content">
+    <center><h1>JUNGKOOK</h1></center>
+    <ul>
+      <li><strong>Nombre:</strong> 정국 / Jungkook</li>
+      <li><strong>Nombre real:</strong> 전정국 / Jeon Jung Kook</li>
+      <li><strong>Nombre en Japonés:</strong> ぜん せいきょく / Zen Seikyoku</li>
+      <li><strong>Nombre en Chino:</strong> 田正国 / Tian Zheng Guo</li>
+      <li><strong>Apodos:</strong> Golden Maknae, JK, Nochu, Kookie, Jungkookie</li>
+      <li><strong>Profesión:</strong> Cantante, Compositor, Rapero, Modelo, Bailarín, MC</li>
+      <li><strong>Fecha de nacimiento:</strong> 01-Septiembre-1997 (27 Años)</li>
+      <li><strong>Lugar de nacimiento:</strong> Busan, Corea del Sur.</li>
+      <li><strong>Estatura:</strong> 178 cm</li>
+      <li><strong>Signo Zodiacal:</strong> Virgo</li>
+      <li><strong>Signo zodiacal chino:</strong> Buey</li>
+      <li><strong>Familia:</strong> Padres y hermano mayor.</li>
+    </ul>
+    <center><img src="img9.jpg" width="400" height="300" alt="Jungkook" /></center>
+
+    <br><br>
+    <a href="Index.html" style="color: rgb(95, 7, 211); position: fixed; bottom: 85px; right: 10px;">🏠</a>
+    <a href="biografia.html" style="color: rgb(95, 7, 211); position: fixed; bottom: 85px; right: 45px;">🔙</a>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <h3>Redes Sociales Oficiales</h3>
+    <p>💜 Instagram: <a href="https://www.instagram.com/bts.bighitofficial/" style="color: rgb(190, 164, 223);">@bts.bighitofficial</a></p>
+    <p>💜 Twitter: <a href="https://twitter.com/BTS_twt" style="color: rgb(190, 164, 223);">@BTS_twt</a></p>
+    <p>💜 YouTube: <a href="https://www.youtube.com/user/BANGTANTV" style="color: rgb(190, 164, 223);">BANGTANTV</a></p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebarMenu').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

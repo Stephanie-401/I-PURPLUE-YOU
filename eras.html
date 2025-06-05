@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTS - Página Oficial</title>
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ecc9e1;
+      color: white;
+    }
+
+    header {
+      background-color: #4B0082;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    header img {
+      width: 120px;
+      height: auto;
+      margin-right: 15px;
+      position: absolute;
+      left: 20px;
+    }
+
+
+    .sidebar {
+      width: 180px;
+      background-color: #5e11a3;
+      padding: 20px 15px;
+      height: 100vh;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      transition: transform 0.3s ease;
+      z-index: 999;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .menu-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-list li {
+      margin-bottom: 15px;
+    }
+
+    .menu-list li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+
+    .menu-list li a:hover {
+      background-color: #7c29d3;
+    }
+
+
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 90px;
+      left: 10px;
+      background-color: #5e11a3;
+      color: white;
+      border: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+
+    .main-content {
+      margin-left: 200px;
+      padding: 20px;
+      margin-top: 120px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      padding: 3px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 7px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .main-content {
+        margin-left: 0 !important;
+        margin-top: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <header>
+    <img src="logo.webp" alt="Logo de BTS" />
+    <h1>BTS</h1>
+  </header>
+
+ 
+  <button class="hamburger" onclick="toggleMenu()">☰ Menú</button>
+
+
+  <nav class="sidebar" id="sidebarMenu">
+    <div class="menu-header">
+      <h2>💜 </h2>
+    </div>
+    <ul class="menu-list">
+      <li><a href="Index.html">🏠 Inicio</a></li>
+      <li><a href="biografia.html">👤 Biografía</a></li>
+      <li><a href="discografia.html">🎵 Discografía</a></li>
+      <li><a href="filmografia.html">🎬 Filmografía</a></li>
+      <li><a href="eras.html">🌌 ERAS</a></li>
+    </ul>
+  </nav>
+
+   <div class="main-content">
+    <h1 style="color: #0a0a0a;">ERAS</h1>
+    <br>
+    <ol>
+        <h3><li><strong>Pre-debut</strong></li> (2010-2013)  </h3>
+                    <p><strong>Pre-debut</strong> Antes de su debut oficial en 2013, BTS (Bangtan Sonyeondan) fue formado como un grupo de hip-hop por Big Hit Entertainment.
+                       La formación de BTS comenzó en 2010, con la firma de RM (Kim Nam-joon) después de ser escuchado rapeando por el CEO de Big Hit, Bang Si-hyuk. 
+                       En 2012, la alineación final se consolidó, incluyendo a Jin, Jimin, V y Jungkook. </p>
+        <img src ="img1/Pre-debut 3.webp" width="300" height="200">
+         <img src ="img1/Pre-debut 4.jpg" width="300" height="200">
+          <img src ="img1/Pre-debut 5.webp" width="300" height="200">
+        <img src ="img1/Pre-debut 1.jpg" width="300" height="200">
+         <img src ="img1/Pre-debut 2.jpg" width="300" height="200">
+         
+        <br>
+        <br> 
+        <br>
+        <br>            
+           <h3><li><strong>School Trilogy Era </strong></li>  (2013-2014)  </h3>
+                    <p>es la primera era de la banda en coreano y japonés, que comenzó con su sencillo debut "2 Cool 4 Skool" el 12 de junio de 2013 
+                       y terminó con el video musical de "Danger (Mo-Blue-Mix) (Feat. Thanh)" el 20 de noviembre de 2014.  </p>
+                       <p> Esta era se caracteriza por temas de juventud, sueños, felicidad y amor,
+                         incluyendo el concepto de música oscura, rap prominente y letras que desafían las normas.
+                         La trilogía incluye los álbumes "2 Cool 4 Skool", "Skool Luv Affair" y "Dark & Wild". </p>
+        <img src ="img1/School Trilogy 1.jpg"controls="controls" width="300" height="200">
+         <img src ="img1/School Trilogy 2.jpg"controls="controls" width="300" height="200">
+         <img src ="img1/School Trilogy 3.webp"controls="controls" width="300" height="200">
+         <img src ="img1/School Trilogy 4.jpg"controls="controls" width="300" height="200">
+         
+        <br>
+        <br>     
+        <br>
+        <br> 
+          <h3><li><strong>Youth Trilogy Era</strong></li> (2015-2016) </h3>
+                  <p><strong>Youth Trilogy</strong> explora el concepto de "juventud a la deriva" y "the most beautiful moment in life"
+                     (화양연화 o 花様年華, también conocido como hwa yang yeon hwa o HYYH).</p> 
+                    <p> Al comienzo de la adultez temprana, la belleza coexiste con la incertidumbre.
+                         Sin embargo, a pesar de la inseguridad, estos jóvenes siguen adelante. </p>
+         <img src ="img1/Youth Trilogy 5.jpg" width="300" height="200">
+         <img src ="img1/Youth Trilogy 2.jpg" width="300" height="200">
+          <img src ="img1/Youth Trilogy 6.jpg" width="300" height="200">
+         <img src ="img1/Youth Trilogy 3.jpg" width="300" height="200">
+         <img src ="img1/Youth Trilogy 4.jpg" width="300" height="200">
+        
+        <br>
+        <br>     
+        <br>
+        <br> 
+           <h3><li><strong>Wings Era</strong></li> (2016-2017)  </h3>
+                  <p>En la era <strong>Wings</strong>  BTS continúa sus historias de juventud y crecimiento, comenzando
+                    con canciones sobre chicos que enfrentan la tentación por primera vez y experimentan un conflicto. </p>
+                    <p> El capítulo concluye con un mensaje de consuelo y esperanza para los jóvenes que sufren en su generación. </p>
+        <img src ="img1/Wings 1.jpg"controls="controls" width="300" height="200">
+         <img src ="img1/Wings 2.jpg"controls="controls" width="300" height="200">
+         <img src ="img1/Wings 4.png"controls="controls" width="300" height="200">
+         <img src ="img1/Wings 5.jpg"controls="controls" width="300" height="200">
+        <br>
+        <br>     
+        <br>
+        <br> 
+           <h3><li><strong>Love Yourself Era </strong></li> (2017-2019) </h3>
+                  <p>En la era <strong>Love Yourself</strong> explora el amor como una narrativa de transición
+                     a la adultez y como un mensaje de paz y unidad para la sociedad.  </p>
+                    <p> El grupo expresa diferentes facetas del amor, desde los momentos emocionantes del 
+                        primer amor, hasta el amor falso que lleva a la pérdida, y finalmente, 
+                        el mensaje de que el amor propio es el amor verdadero. </p>
+        <img src ="img1/Love Yourself 1.jpg"controls="controls" width="300" height="200">
+         <img src ="img1/Love Yourself 2.jpg"controls="controls" width="300" height="200">
+         <img src ="img1/Love Yourself 3.jpg"controls="controls" width="300" height="200"> 
+         <img src ="img1/Love Yourself 4.jpg"controls="controls" width="300" height="200">
+         <img src ="img1/Love Yourself 5.jpg"controls="controls" width="300" height="200">
+
+         <br>
+        <br>     
+        <br>
+        <br> 
+           <h3><li><strong>Map of the Soul Era </strong></li> (2019-2020)</h3>
+                  <p>En la era <strong>Map of the Soul</strong> narra su camino hacia el descubrimiento de su yo real y completo.
+                     En esta serie, el grupo canta sobre aceptar tanto el yo que quiero mostrar al mundo como la sombra interior que quiero despreciar. </p>
+        <img src ="img1/Map of the Soul 1.jpg"controls="controls" width="300" height="200">
+         <img src ="img1/Map of the Soul 2.jpg"controls="controls" width="300" height="200">
+         <img src ="img1/Map of the Soul 3.jpg"controls="controls" width="300" height="200"> 
+         <img src ="img1/Map of the Soul 4.jpg"controls="controls" width="300" height="200">
+        
+        <br>     
+        <br>
+        <br> 
+           <h3><li><strong>Be Era </strong></li> (2020-2021) </h3>
+                  <p>En la era <strong>Be</strong> BTS expresa sus sentimientos encontrados sobre la sensación de impotencia en el mundo, 
+                    desde el miedo y la ansiedad mezclados con la determinación de superarlos y brindar alegría a la comunidad global. </p>
+        <img src ="img2/Be 1.jpg"controls="controls" width="300" height="200">
+         <img src ="img2/Be 2.jpg"controls="controls" width="300" height="200">
+         <img src ="img2/Be 3.jpg"controls="controls" width="300" height="200"> 
+         <img src ="img2/Be 4.jpg"controls="controls" width="300" height="200">
+         <img src ="img2/Be 5.jpg"controls="controls" width="300" height="200">
+         <img src ="img2/Be 9.jpg"controls="controls" width="300" height="200">
+         <img src ="img2/Be 6.jpg"controls="controls" width="300" height="200">
+         <img src ="img2/Be 7.jpg"controls="controls" width="300" height="200">
+         <img src ="img2/Be 8.jpg"controls="controls" width="300" height="200">
+
+         <br>
+        <br>     
+        <br>
+        <br> 
+           <h3><li><strong>Butter & Permission to Dance Era </strong></li> (2020-2021) </h3>
+                  <p>En la era <strong>Be</strong> BTS aporta energía positiva y brillante
+                     para mejorar el estado de ánimo y hacer que la gente baile. </p>
+        <img src ="img2/1.jpeg"controls="controls" width="300" height="200">
+         <img src ="img2/2.jpeg"controls="controls" width="300" height="200">
+         <img src ="img2/3.jpeg"controls="controls" width="300" height="200"> 
+         <img src ="img2/4.webp"controls="controls" width="300" height="200">
+         <img src ="img2/5.jpg"controls="controls" width="350" height="200">
+         
+         <br>
+        <br>     
+        <br>
+        <br> 
+           <h3><li><strong>Proof Era  </strong></li> (2022) </h3>
+                  <p>En la era <strong>Proof</strong> BTS expresa sus sentimientos encontrados sobre la sensación de impotencia en el mundo, 
+                    desde el miedo y la ansiedad mezclados con la determinación de superarlos y brindar alegría a la comunidad global. </p>
+        
+         <img src ="img/Proof 1.jpg"controls="controls" width="300" height="200">
+         <img src ="img/Proof 2.jpg"controls="controls" width="300" height="200">
+         <img src ="img/Proof 3.jpg"controls="controls" width="300" height="200"> 
+         <img src ="img/RM.jpg"controls="controls" width="300" height="400">
+         <img src ="img/JIN.jpg"controls="controls" width="300" height="400">
+         <img src ="img/SUGA.jpg"controls="controls" width="300" height="400">
+         <img src ="img/J-HOPE.jpg"controls="controls" width="300" height="400">
+         <img src ="img/JIMIN.jpg"controls="controls" width="300" height="400">
+         <img src ="img/V.jpg"controls="controls" width="300" height="400">
+         <img src ="img/JK.jpg"controls="controls" width="300" height="400">
+
+       </ol>
+        <br>
+        <br> 
+         <a href="Index.html" class="boton" style="color: rgb(95, 7, 211); position: fixed; bottom: 85px;  right: 10px; ">🏠</a>
+        <br>
+        <br>
+    </div>
+
+ 
+    <footer style="background-color: #333; padding: 3px; position: fixed; bottom: 0; width: 100%; text-align: center; font-size: 7px;">
+        <h3>Redes Sociales Oficiales</h3>
+        <p>💜 Instagram: <a href="https://www.instagram.com/bts.bighitofficial/" style="color: rgb(190, 164, 223);">@bts.bighitofficial</a></p>
+        <p>💜 Twitter: <a href="https://twitter.com/BTS_twt" style="color: rgb(190, 164, 223);">@BTS_twt</a></p>
+        <p>💜 YouTube: <a href="https://www.youtube.com/user/BANGTANTV" style="color: rgb(190, 164, 223);">BANGTANTV</a></p>
+    </footer>
+ <script>
+    function toggleMenu() {
+      document.getElementById('sidebarMenu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

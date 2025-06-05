@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTS - Página Oficial</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #aadbf7;
+      color: white;
+    }
+
+    header {
+      background-color: #4B0082;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    header img {
+      width: 120px;
+      height: auto;
+      margin-right: 15px;
+      position: absolute;
+      left: 20px;
+    }
+
+    .sidebar {
+      width: 180px;
+      background-color: #5e11a3;
+      padding: 20px 15px;
+      height: 100vh;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      transition: transform 0.3s ease;
+      z-index: 999;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .menu-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-list li {
+      margin-bottom: 15px;
+    }
+
+    .menu-list li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+
+    .menu-list li a:hover {
+      background-color: #7c29d3;
+    }
+
+
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 90px;
+      left: 10px;
+      background-color: #5e11a3;
+      color: white;
+      border: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    .main-content {
+      margin-left: 200px;
+      padding: 20px;
+      margin-top: 120px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      padding: 3px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 7px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .main-content {
+        margin-left: 0 !important;
+        margin-top: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <header>
+    <img src="logo.webp" alt="Logo de BTS" />
+    <h1>BTS</h1>
+  </header>
+
+
+  <button class="hamburger" onclick="toggleMenu()">☰ Menú</button>
+
+
+  <nav class="sidebar" id="sidebarMenu">
+    <div class="menu-header">
+      <h2>💜 </h2>
+    </div>
+    <ul class="menu-list">
+      <li><a href="Index.html">🏠 Inicio</a></li>
+      <li><a href="biografia.html">👤 Biografía</a></li>
+      <li><a href="discografia.html">🎵 Discografía</a></li>
+      <li><a href="filmografia.html">🎬 Filmografía</a></li>
+      <li><a href="eras.html">🌌 ERAS</a></li>
+    </ul>
+  </nav>
+
+   <div class="main-content">
+    <h1 style="color: #0a0a0a;">SERIES</h1>
+    <br>
+    <ol>
+       <h3><li><strong> Bangtan Bomb</strong></li>(Serie: Reality) </h3>
+        <p><strong> Bangtan Bomb</strong> (también conocido como BTS Bomb ; escrito en mayúsculas) es un programa web de videos cortos de BTS publicados en su canal de YouTube .
+          Estos videos se centran en los miembros divirtiéndose entre bastidores en programas musicales, ceremonias de premios, eventos, presentaciones en vivo, etc.
+         También se publican prácticas de baile.
+         Desde el 13 de enero de 2020, los vídeos se publican con subtítulos en inglés pero se pueden configurar al español.</p>
+         <video poster="img/Bangtan_Bomb_Logo.webp" width="300" height="250" controls="controls" >
+                    <source src="videos/Bangtan Bomb.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                   <a href="https://www.youtube.com/watch?v=MBc8iKnHFio&list=PL5hrGMysD_Gu2a7-KuaQTxjRVPqM2Bi63" style="color: rgb(2, 2, 2);"><h5> Bangtan Bomb </h5></a> 
+       
+                   <h3><li><strong> BTS American Hustle Life</strong></li>(Serie: Reality) </h3>
+                    <p><strong>BTS American Hustle Life</strong> (방탄소년단의 아메리칸 허슬 라이프) es un reality show de BTS transmitido por Mnet. 
+                    Se estrenó el 24 de julio de 2014 a las 8:00 pm KST.</p>
+                    <p>El programa presenta a los miembros de BTS, estaban pensando que iban a viajar a los Estados Unidos para un nuevo álbum,
+                         pero descubrieron que estaban entrenando con sus nuevos tutores de hip-hop, Coolio , Tony Jones y Warren G.</p>
+        <video poster="img/AHL.webp" width="300" height="250" controls="controls" >
+                    <source src="videos/BTS American Hustle Life.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                   <a href="https://youtube.com/playlist?list=PLjUVzlcpeN4SCbGgR2Tt7BqrFQdZA3TeJ&si=OzF4YN4jfNTPSybg" style="color: rgb(2, 2, 2);"><h5>BTS American Hustle Life </h5></a> 
+
+    
+
+        <h3><li><strong> RUN BTS</strong></li>(Serie: Reality) </h3>
+                    <p><strong>"Run BTS!"</strong>(달려라 방탄) es una serie web de variedades surcoreana protagonizada por el grupo BTS.
+                         Se emite semanalmente y se puede ver de forma gratuita en V Live (hasta 2020) y Weverse.
+                         La serie muestra a los miembros de BTS realizando diversas actividades, desafíos, juegos y mucho más. .</p>
+        <video poster="img/RUN.png" width="300" height="250" controls="controls" >
+                    <source src="videos/RUN BTS.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                   <a href="https://youtube.com/playlist?list=PL5hrGMysD_GsFYwSFDWDyUApfpHEwTDhE&si=OqBfgeqH_vfTDGGv" style="color: rgb(2, 2, 2);"><h5>"Run BTS!" </h5></a> 
+
+
+          <h3><li><strong>BTS: Bon Voyage</strong></li>(Serie: Reality) </h3>
+                    <p><strong>BTS 본보야지</strong> (BTS: Bon Voyage) es un reality del grupo BTS .
+                     En él, los miembros de BTS viajan por el mundo participando en diferentes juegos y actividades..</p>
+        <video poster="img/BTS 본보야지.webp" width="300" height="250" controls="controls" >
+                    <source src="videos/Bon Voyage.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                   <a href="https://youtube.com/playlist?list=PLjvU6mhIbSWF4QEDIJ_RGnR2IpTBG9zmd&si=LCOQJsUc18O5ovQ_" style="color: rgb(2, 2, 2);"><h5>BTS 본보야지 </h5></a> 
+    
+        <h3><li><strong>BTS: Burn the Stage</strong></li>(Serie: Documental) </h3>
+                    <p><strong>Burn the Stage</strong> es una docu-serie realizada por Big Hit Entertainment y promocionada en Youtube Premium,
+                         este docu-serie narra los acontecimientos detrás de escenas durante BTS Live Trilogy Episode III The Wings Tour.</p>
+         <center><img src ="img/Burn_The_Stage.webp"controls="controls" width="300" height="200"></center>
+                    
+                   <a href="https://youtube.com/playlist?list=PL5hrGMysD_Gt_X7teb-D3_Rc4QQfZF9A7&si=FG49Vr1uofPSEEmv_" style="color: rgb(2, 2, 2);"><h5>Burn The Stage </h5></a> 
+           
+         <h3><li><strong>BTS Monuments: Beyond The Star</strong></li>(Serie: Documental) </h3>
+                    <p><strong>BTS Monuments: Beyond The Star</strong>, en este documental BTS celebra su 10.° aniversario como ícono mundial del pop del siglo 21. Esta serie explora la vida cotidiana y 
+                        los pensamientos más íntimos de los siete integrantes de BTS a medida que buscan el propósito y el significado de la vida. </p>
+        <video poster="img/BTS Monuments Beyond The Star.webp" width="300" height="250" controls="controls" >
+                    <source src="videos/BTS Monuments Beyond The Star.mp4" type="video/mp4">
+                    <source src=" videos/video1.ogv" type="video/ogv">
+                      Tu navegador no soporta la etiqueta de video HTML5
+                    </video>
+                   <a href="https://www.disneyplus.com/es-mx/browse/entity-eb9a0a90-2e87-4795-9c69-5cee499e890e?distributionPartner=google" style="color: rgb(2, 2, 2);"><h5>BTS: Monuments Beyond The Star </h5></a> 
+    </ol>
+        <br>
+        <br> 
+        <br>
+          <a href="Index.html" class="boton" style="color: rgb(95, 7, 211); position: fixed; bottom: 85px;  right: 10px; ">🏠</a>
+           <a href="filmografia.html" class="boton" style="color: rgb(95, 7, 211); position: fixed; bottom: 85px;  right: 35px; "> 🔙 </a>
+        <br>
+    </div>
+
+  <footer style="background-color: #333; padding: 3px; position: fixed; bottom: 0; width: 100%; text-align: center; font-size: 7px;">
+        <h3>Redes Sociales Oficiales</h3>
+        <p>💜 Instagram: <a href="https://www.instagram.com/bts.bighitofficial/" style="color: rgb(190, 164, 223);">@bts.bighitofficial</a></p>
+        <p>💜 Twitter: <a href="https://twitter.com/BTS_twt" style="color: rgb(190, 164, 223);">@BTS_twt</a></p>
+        <p>💜 YouTube: <a href="https://www.youtube.com/user/BANGTANTV" style="color: rgb(190, 164, 223);">BANGTANTV</a></p>
+    </footer>
+ <script>
+    function toggleMenu() {
+      document.getElementById('sidebarMenu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
